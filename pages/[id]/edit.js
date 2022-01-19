@@ -69,7 +69,6 @@ export async function getServerSideProps({ params }) {
   const id = params.id;
   const res = await Axios(`http://localhost:3000/api/hero/${id}`);
   const { hero } = res.data;
-  console.log(hero);
   return {
     props: { hero },
   };
